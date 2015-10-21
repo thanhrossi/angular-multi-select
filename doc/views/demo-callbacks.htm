@@ -13,8 +13,8 @@
             isteven-multi-select 
             input-model="modernBrowsers"
             output-model="outputBrowsers"
-            button-label="icon name"         
-            item-label="icon name maker" 
+            button-label="icon name"
+            item-label="icon name maker"
             tick-property="ticked"     
             on-open="fOpen()"                
             on-close="fClose()"
@@ -23,10 +23,9 @@
             on-select-none="fSelectNone()"
             on-reset="fReset()"
             on-clear="fClear()"
-            on-search-change="fSearchChange( data )"
+            on-search-change="fFilterChange( data )"
+            ng-keypress="submit($event)"
         ></div>
-
-
         <p>&nbsp;</p>
 
         <div role="tabpanel">

@@ -1,4 +1,4 @@
-myApp.controller( 'demoCallbacks' , [ '$scope' , function ($scope) {               
+myApp.controller( 'demoCallbacks' , [ '$scope' , function ($scope) {
 
     $scope.modernBrowsers = [
         { 
@@ -62,11 +62,34 @@ myApp.controller( 'demoCallbacks' , [ '$scope' , function ($scope) {
     $scope.fClear = function() {
         console.log( 'On-clear' );
     }
+    $scope.thanhtran = {};
 
-    $scope.fFilterChange = function( data ) {
+    var keyword = null;
+
+    $scope.fFilterChange = function( data) {
         console.log( 'On-filter-change' );
         console.log( 'On-filter-change - keyword: ' + data.keyword );
         console.log( 'On-filter-change - result: ' );
+
+        keyword = data.keyword;
         console.log( data.result );
+    }
+    $scope.submit = function(e){
+        var hasKeywork = false;
+
+        if (e.which === 13) {
+            for(var index in $scope.modernBrowsers) {
+                if($scope.modernBrowsers[index].name.indexOf(keyword) > -1) {
+                    hasKeywork = true;
+                    break;
+                }
+            }
+
+            if(!hasKeywork) {
+                $scope.modernBrowsers.push({icon: '', name: keyword, maker: 'Thanh', ticked: true});
+                //$('.clearButton').click();
+            }
+
+        }
     }
 }]);

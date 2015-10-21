@@ -51,7 +51,7 @@ angular.module( 'isteven-multi-select', ['ng'] ).directive( 'istevenMultiSelect'
             onClear         : '&',  
             onClose         : '&',
             onSearchChange  : '&',  
-            onItemClick     : '&',            
+            onItemClick     : '&',
             onOpen          : '&', 
             onReset         : '&',  
             onSelectAll     : '&',  

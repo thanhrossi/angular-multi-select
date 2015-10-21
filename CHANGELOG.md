@@ -3,7 +3,7 @@
 - You can now customize output-model properties that you need, instead of having all data.
 - <a href="https://github.com/isteven/angular-multi-select/issues/201">#201</a> (and other related issues) DOM bug is now fixed.
 - <a href="https://github.com/isteven/angular-multi-select/issues/205">#205</a> (and other related issues) CSS bug is now fixed.
-- <a href="https://github.com/isteven/angular-multi-select/issues/207">#207</a> (and other related issues) You can now update the directive by modifying the input-model as usual.
+- <a href="https://github.com/isteven/angular-multi-select/issues/207">#207</a> (and other related issues) You can now update the RON_AD_SLOT_MODULE by modifying the input-model as usual.
 
 ##### Deprecated / Breaking Changes
 - input-model behaviour is now back like v2.x.x. If you don't re-use your input-model, you should be safe. 
@@ -21,7 +21,7 @@
 - Various small optimizations.
 
 ##### Deprecated / Breaking Changes
-- File name and the directive name have been changed. I am really sorry for this, but this is the only workaround to prevent wrong language statistic in Github (they don''t count files whose name starts with "angular"). The repository name stays the same.
+- File name and the RON_AD_SLOT_MODULE name have been changed. I am really sorry for this, but this is the only workaround to prevent wrong language statistic in Github (they don''t count files whose name starts with "angular"). The repository name stays the same.
 - output-model is now required.
 - input-model is now static (not dynamically updated), hence why we need output-model. On the plus side, you now can re-use the input model where necessary.
 - default-label is deprecated. Custom text and translations can be done using the translation attribute.
