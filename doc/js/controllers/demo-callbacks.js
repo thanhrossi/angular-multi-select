@@ -73,22 +73,20 @@ myApp.controller( 'demoCallbacks' , [ '$scope', function ($scope) {
         console.log( data.result );
     }
     $scope.submit = function(e){
-        var hasKeywork = false;
+        var hasKeyword = false;
 
         if (e.which === 13) {
             for(var index in $scope.modernBrowsers) {
                 if($scope.modernBrowsers[index].name.indexOf(keyword) > -1) {
-                    hasKeywork = true;
+                    hasKeyword = true;
                     break;
                 }
             }
 
-            if(!hasKeywork) {
-                $scope.modernBrowsers.push({icon: '', name: keyword, maker: 'Thanh', ticked: true});
+            if(!hasKeyword) {
+                $scope.modernBrowsers.push({icon: '', name: keyword, maker: ' ', ticked: true});
 
                 var clearButton = angular.element(('.clearButton'));
-
-                console.log(clearButton);
 
                 setTimeout(function() {
                     clearButton.triggerHandler('click');
