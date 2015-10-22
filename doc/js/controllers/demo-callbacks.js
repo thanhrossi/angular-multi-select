@@ -1,5 +1,4 @@
-myApp.controller( 'demoCallbacks' , [ '$scope' , function ($scope) {
-
+myApp.controller( 'demoCallbacks' , [ '$scope', function ($scope) {
     $scope.modernBrowsers = [
         { 
             icon: '<img src="https://cdn1.iconfinder.com/data/icons/fatcow/32/opera.png" />',                         
@@ -62,7 +61,6 @@ myApp.controller( 'demoCallbacks' , [ '$scope' , function ($scope) {
     $scope.fClear = function() {
         console.log( 'On-clear' );
     }
-    $scope.thanhtran = {};
 
     var keyword = null;
 
@@ -87,7 +85,14 @@ myApp.controller( 'demoCallbacks' , [ '$scope' , function ($scope) {
 
             if(!hasKeywork) {
                 $scope.modernBrowsers.push({icon: '', name: keyword, maker: 'Thanh', ticked: true});
-                //$('.clearButton').click();
+
+                var clearButton = angular.element(('.clearButton'));
+
+                console.log(clearButton);
+
+                setTimeout(function() {
+                    clearButton.triggerHandler('click');
+                }, 0)
             }
 
         }
