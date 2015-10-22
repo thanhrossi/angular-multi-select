@@ -34,6 +34,8 @@ myApp.controller( 'demoCallbacks' , [ '$scope', function ($scope) {
 
     $scope.fOpen = function() {
         console.log( 'On-open' );
+        var inputFilter = angular.element(('.inputFilter'));
+        inputFilter.attr('placeholder','Search and add anymore item');
     }
 
     $scope.fClose = function() {
@@ -68,10 +70,12 @@ myApp.controller( 'demoCallbacks' , [ '$scope', function ($scope) {
         console.log( 'On-filter-change' );
         console.log( 'On-filter-change - keyword: ' + data.keyword );
         console.log( 'On-filter-change - result: ' );
-
         keyword = data.keyword;
         console.log( data.result );
     }
+
+
+
     $scope.submit = function(e){
         var hasKeyword = false;
 
